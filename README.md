@@ -80,10 +80,8 @@ None.
 
 ## Example Playbook
 
-    ```sh
-    cat docker_playbook.yml
-    ansible-playbook -i docker_inventory_file docker_playbook.yml
-    ```
+- cat docker_playbook.yml
+- ansible-playbook -i docker_inventory_file docker_playbook.yml
 
 ###  Create an Ansible Playbook to Test the Role then Run the Playbook
 
