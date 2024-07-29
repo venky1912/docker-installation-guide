@@ -85,7 +85,6 @@ None.
     ansible-playbook -i docker_inventory_file docker_playbook.yml
     ```
 
-
 ###  Create an Ansible Playbook to Test the Role then Run the Playbook
 
 Create a playbook to test your role:
