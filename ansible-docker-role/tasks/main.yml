@@ -1,0 +1,20 @@
+---
+- name: Install Docker on Ubuntu/Debian
+  include_tasks: ubuntu_debian.yml
+  when: ansible_os_family == "Debian"
+
+- name: Install Docker on CentOS/Fedora/Red Hat
+  include_tasks: centos_fedora_redhat.yml
+  when: ansible_os_family == "RedHat"
+
+- name: Install Docker on Amazon Linux
+  include_tasks: amazon_linux.yml
+  when: ansible_distribution == "Amazon"
+
+- name: Install Docker on Windows
+  include_tasks: windows.yml
+  when: ansible_os_family == "Windows"
+
+- name: Install Docker on MacOS
+  include_tasks: mac.yml
+  when: ansible_os_family == "Darwin"

@@ -1,0 +1,34 @@
+---
+galaxy_info:
+  role_name: docker_install
+  author: your_name
+  description: Install Docker on various operating systems
+  company: venkateswarareddy_sanikommu
+  license: MIT
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: Debian
+      versions:
+        - buster
+        - stretch
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+    - name: EL
+      versions:
+        - 7
+        - 8
+    - name: Amazon
+      versions:
+        - 2
+    - name: Windows
+      versions:
+        - 2016
+        - 2019
+    - name: MacOSX
+      versions:
+        - all
+
+dependencies: []

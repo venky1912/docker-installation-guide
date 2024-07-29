@@ -1,0 +1,21 @@
+---
+- name: Download Docker Desktop for Mac
+  get_url:
+    url: https://desktop.docker.com/mac/stable/Docker.dmg
+    dest: /tmp/Docker.dmg
+
+- name: Mount the DMG file
+  command: hdiutil attach /tmp/Docker.dmg
+  register: hdiutil_attach
+
+- name: Copy Docker to Applications folder
+  command: cp -R /Volumes/Docker/Docker.app /Applications
+
+- name: Unmount the DMG file
+  command: hdiutil detach /Volumes/Docker
+
+- name: Start Docker
+  command: open /Applications/Docker.app
+
+- name: Verify Docker installation
+  command: docker --version

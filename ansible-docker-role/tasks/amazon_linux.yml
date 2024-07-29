@@ -1,0 +1,19 @@
+---
+- name: Update YUM package index
+  yum:
+    update_cache: yes
+
+- name: Install Docker
+  command: amazon-linux-extras install docker -y
+
+- name: Start and enable Docker
+  systemd:
+    name: docker
+    enabled: yes
+    state: started
+
+- name: Add ec2-user to the docker group
+  user:
+    name: ec2-user
+    groups: docker
+    append: yes

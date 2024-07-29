@@ -1,0 +1,19 @@
+---
+- name: Download Docker Desktop Installer
+  win_get_url:
+    url: https://desktop.docker.com/win/stable/Docker%20Desktop%20Installer.exe
+    dest: C:\Temp\DockerDesktopInstaller.exe
+
+- name: Install Docker Desktop
+  win_package:
+    path: C:\Temp\DockerDesktopInstaller.exe
+    arguments: /install /quiet /norestart
+    state: present
+
+- name: Enable Hyper-V
+  win_feature:
+    name: Hyper-V
+    state: present
+
+- name: Verify Docker installation
+  win_command: docker --version
