@@ -7,9 +7,13 @@ This repository contains guides for installing Docker on various operating syste
 
 - git clone https://github.com/venky1912/docker-installation-guide.git
 - cd docker-installation-guide
-- [Linux](docs/linux.md)
-- [Windows](docs/windows.md)
-- [Mac](docs/mac.md)
+
+## Docker Installation with manual Steps under guide_docs for each distributed Systems.
+
+
+- [Linux](guide_docs/linux.md)
+- [Windows](guide_docs/windows.md)
+- [Mac](guide_docs/mac.md)
 
 
 ## Docker Installation with Shell script and Powershell for Windows
